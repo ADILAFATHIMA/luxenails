@@ -129,8 +129,8 @@ const Home = () => {
               <div className="relative w-full aspect-square max-w-lg mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full transform rotate-12 scale-95 opacity-20" />
                 <img
-                  src="https://images.pexels.com/photos/7860090/pexels-photo-7860090.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Nail Polish Collection"
+                  src="/assets/images/img1.png"
+                  alt="LuxeNails Collection"
                   className="relative rounded-3xl shadow-2xl object-cover w-full h-full"
                 />
                 <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4 animate-scale-in">
