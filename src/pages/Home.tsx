@@ -8,7 +8,7 @@ const featuredProducts = [
     name: 'Rose Petal',
     shade: 'Soft Pink',
     price: 24,
-    image: 'public/assets/images/im2.png',
+    image: 'public/assets/images/img2.png',
   },
   {
     id: 2,
