@@ -15,7 +15,7 @@ const featuredProducts = [
     name: 'Midnight Velvet',
     shade: 'Deep Burgundy',
     price: 26,
-    image: 'https://images.pexels.com/photos/7860090/pexels-photo-7860090.jpeg?auto=compress&cs=tinysrgb&w=600',
+    image: 'public/assets/images/img3.png',
   },
   {
     id: 3,
