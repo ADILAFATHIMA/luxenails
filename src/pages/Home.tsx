@@ -22,7 +22,7 @@ const featuredProducts = [
     name: 'Coral Sunset',
     shade: 'Vibrant Coral',
     price: 24,
-    image: 'https://images.pexels.com/photos/268257/pexels-photo-268257.jpeg?auto=compress&cs=tinysrgb&w=600',
+    image: 'public/assets/images/img4.png',
   },
   {
     id: 4,
