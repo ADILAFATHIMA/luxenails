@@ -8,28 +8,28 @@ const featuredProducts = [
     name: 'Rose Petal',
     shade: 'Soft Pink',
     price: 24,
-    image: 'public/assets/images/img2.png',
+    image: '/assets/images/img2.png',
   },
   {
     id: 2,
     name: 'Midnight Velvet',
     shade: 'Deep Burgundy',
     price: 26,
-    image: 'public/assets/images/img3.png',
+    image: '/assets/images/img3.png',
   },
   {
     id: 3,
     name: 'Coral Sunset',
     shade: 'Vibrant Coral',
     price: 24,
-    image: 'public/assets/images/img4.png',
+    image: '/assets/images/img4.png',
   },
   {
     id: 4,
     name: 'French Nude',
     shade: 'Natural Beige',
     price: 26,
-    image: 'https://images.pexels.com/photos/7860090/pexels-photo-7860090.jpeg?auto=compress&cs=tinysrgb&w=600',
+    image: '/assets/images/img1.png',
   },
 ];
 
