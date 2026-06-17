@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3
+           bg-gradient-to-r from-primary-500 to-primary-600
+           text-white font-semibold rounded-full
+           shadow-lg shadow-primary-500/30
+           hover:shadow-xl hover:shadow-primary-500/40
+           transform hover:-translate-y-0.5
+           transition-all duration-300 ease-out;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3
+           bg-white text-primary-600 font-semibold rounded-full
+           border-2 border-primary-200
+           hover:bg-primary-50 hover:border-primary-300
+           transform hover:-translate-y-0.5
+           transition-all duration-300 ease-out;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-6 py-3
+           bg-transparent text-white font-semibold rounded-full
+           border-2 border-white/50
+           hover:bg-white/10 hover:border-white
+           transform hover:-translate-y-0.5
+           transition-all duration-300 ease-out;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-lg
+           hover:shadow-xl hover:-translate-y-1
+           transition-all duration-300 ease-out;
+  }
+
+  .card-dark {
+    @apply bg-gray-900 rounded-2xl shadow-lg
+           hover:shadow-xl hover:-translate-y-1
+           transition-all duration-300 ease-out;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-display font-bold text-gray-900;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-gray-600 max-w-2xl mx-auto;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent;
+  }
+
+  .glass-effect {
+    @apply bg-white/80 backdrop-blur-md;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ec4899, #db2777);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #db2777, #be185d);
+}
+
+/* Image hover effects */
+.image-hover {
+  overflow: hidden;
+}
+
+.image-hover img {
+  transition: transform 0.5s ease-out, filter 0.3s ease;
+}
+
+.image-hover:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+/* Stagger animations for children */
+.stagger-children > * {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
+.stagger-children > *:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form focus styles */
+input:focus, textarea:focus {
+  outline: none;
+  @apply ring-2 ring-primary-500 ring-opacity-50;
+}
+
+/* Smooth page transitions */
+.page-transition {
+  animation: pageTransition 0.3s ease-out;
+}
+
+@keyframes pageTransition {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
