@@ -77,39 +77,75 @@ const Home = () => {
     <div className="overflow-hidden">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center bg-gradient-to-br from-primary-50 via-white to-secondary-50">
-        {/* Hero Image Section */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-float" />
+          <div className="absolute top-60 -left-40 w-80 h-80 bg-secondary-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float" style={{ animationDelay: '1s' }} />
+        </div>
 
-        <div className="relative animate-slide-up">
-          <div className="relative w-full aspect-square max-w-lg mx-auto">
-
-            <div className="absolute inset-0 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full transform rotate-12 scale-95 opacity-20" />
-
-            <img
-              src="/assets/images/img1.png"
-              alt="LuxeNails Collection"
-              className="relative rounded-3xl shadow-2xl object-cover w-full h-full"
-            />
-
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4 animate-scale-in">
-              <div className="flex items-center gap-3">
-
-                <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
-                  <CheckCircle className="w-6 h-6 text-green-600" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="animate-fade-in">
+              <span className="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-medium mb-6">
+                New Spring Collection 2026
+              </span>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-gray-900 leading-tight mb-6">
+                Express Your
+                <span className="block gradient-text">Unique Style</span>
+              </h1>
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-xl">
+                Discover luxurious, long-lasting nail polishes crafted to complement your individuality.
+                Vegan, cruelty-free, and made to perfection.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link to="/products" className="btn-primary">
+                  Shop Collection
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+                <Link to="/about" className="btn-secondary">
+                  Our Story
+                </Link>
+              </div>
+              <div className="mt-10 flex items-center gap-6">
+                <div className="flex -space-x-2">
+                  {[1, 2, 3, 4].map((i) => (
+                    <div
+                      key={i}
+                      className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-200 to-primary-300 border-2 border-white shadow-sm"
+                    />
+                  ))}
                 </div>
-
                 <div>
-                  <p className="font-semibold text-gray-900">
-                    100% Vegan
-                  </p>
-
-                  <p className="text-sm text-gray-500">
-                    Cruelty-free formula
-                  </p>
+                  <div className="flex items-center gap-1 text-yellow-500">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-sm text-gray-600">Trusted by 50,000+ happy customers</p>
                 </div>
-
               </div>
             </div>
 
+            <div className="relative animate-slide-up">
+              <div className="relative w-full aspect-square max-w-lg mx-auto">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full transform rotate-12 scale-95 opacity-20" />
+                <img
+                  src="/assets/images/img1.png"
+                  alt="LuxeNails Collection"
+                  className="relative rounded-3xl shadow-2xl object-cover w-full h-full"
+                />
+                <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4 animate-scale-in">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
+                      <CheckCircle className="w-6 h-6 text-green-600" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-gray-900">100% Vegan</p>
+                      <p className="text-sm text-gray-500">Cruelty-free formula</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
